@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NW Vue Boilerplate</title>
+
+    <link href="./build/css/main.css" rel="stylesheet" type="text/css">
+    <link href="./build/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+    <!-- Load real app code -->
+    <script src="node_modules/nw-dev/lib/dev.js"></script> 
+</head>
+<body>
+
+    <div id="app" class="container">
+	    <button
+		class="btn btn-success btn-lg"
+		@click="showMenu = true">Menu</button>
+
+		<sidebar :show.sync="showMenu" placement="right" header="Title" :width="350">
+		...
+		</sidebar>
+    	<div class="row">
+    		<div class="col-sm-12">
+				<h1>Hello App!</h1>
+				
+			</div>
+		</div>
+	</div>
+	<script src="./node_modules/vue/dist/vue.js"></script>
+    <script src="./node_modules/vue-strap/dist/vue-strap.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
